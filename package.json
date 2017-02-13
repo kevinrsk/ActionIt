@@ -38,7 +38,7 @@
     "protractor": "protractor",
     "rimraf": "rimraf",
     "server:dev:hmr": "npm run server:dev -- --inline --hot",
-    "server:dev": "webpack-dev-server --port 3000 --config config/webpack.dev.js --progress --profile --watch --content-base src/",
+    "server:dev": "webpack-dev-server --port 3000 --config config/webpack.dev.js -d --progress --profile --watch --content-base src/",
     "server:prod": "http-server dist -c-1 --cors",
     "server:prod:ci": "http-server dist -p 3000 -c-1 --cors",
     "server": "npm run server:dev",
@@ -72,10 +72,13 @@
     "@angularclass/conventions-loader": "^1.0.2",
     "@angularclass/hmr": "~1.2.2",
     "@angularclass/hmr-loader": "~3.0.2",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "http-server": "^0.9.0",
     "ie-shim": "^0.1.0",
     "jasmine-core": "^2.5.2",
+    "jquery": "^3.1.1",
+    "less": "^2.7.2",
     "reflect-metadata": "^0.1.9",
     "rxjs": "~5.0.2",
     "zone.js": "~0.7.4"
@@ -113,6 +116,7 @@
     "karma-remap-coverage": "^0.1.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "1.8.1",
+    "less-loader": "^2.2.3",
     "ng-router-loader": "^1.0.2",
     "ngc-webpack": "1.1.0",
     "node-sass": "^4.1.1",
@@ -139,18 +143,18 @@
     "webpack-dev-server": "2.2.0-rc.0",
     "webpack-md5-hash": "^0.0.5",
     "webpack-merge": "~2.3.1"
-    },
-    "repository": {
-      "type": "git",
-      "url": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
   },
   "bugs": {
-      "url": ""
+    "url": ""
   },
   "engines": {
-      "node": ">= 4.2.1",
-      "npm": ">= 3"
+    "node": ">= 4.2.1",
+    "npm": ">= 3"
   },
   "author": "",
-   "license": "MIT"
+  "license": "MIT"
 }

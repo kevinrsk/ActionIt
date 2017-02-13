@@ -13,3 +13,6 @@ import "rxjs/add/operator/catch";
 
 import "rxjs/add/observable/throw";
 import "rxjs/Rx";
+
+import "jquery";
+import "bootstrap/dist/js/bootstrap";
