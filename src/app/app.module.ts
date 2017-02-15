@@ -8,11 +8,13 @@ import {RouterModule, PreloadAllModules} from "@angular/router";
 import {ROUTES} from "./app.routes";
 
 import {HomeComponent} from "./home"
+import {NavigationComponent} from "./navigation"
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        NavigationComponent
     ],
     imports: [
         BrowserModule,
