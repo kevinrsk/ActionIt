@@ -80,8 +80,10 @@
     "jasmine-core": "^2.5.2",
     "jquery": "^3.1.1",
     "less": "^2.7.2",
+    "moment": "^2.17.1",
     "reflect-metadata": "^0.1.9",
     "rxjs": "~5.0.2",
+    "underscore": "^1.8.3",
     "zone.js": "~0.7.4"
   },
   "devDependencies": {
@@ -92,6 +94,7 @@
     "@types/selenium-webdriver": "2.53.38",
     "@types/source-map": "^0.5.0",
     "@types/uglify-js": "^2.0.27",
+    "@types/underscore": "^1.7.36",
     "@types/webpack": "^2.0.0",
     "angular2-template-loader": "^0.6.0",
     "assets-webpack-plugin": "^3.4.0",

@@ -1,0 +1,17 @@
+<h3>Today</h3>
+
+<div>
+    <div class="lined">
+        Overdue
+    </div>
+    <ul class="todolist">
+        <li *ngFor="let item of overdue()" class="task_item"><span class="task_content_item">{{item.title}}</span><div class="dueDate date">{{item.displayDate}}</div></li>
+    </ul>
+</div>
+
+<div>
+    <div class="lined">Today</div>
+    <ul class="todolist">
+        <li *ngFor="let item of today()" class="task_item"><span class="task_content_item">{{item.title}}</span><div class="dueDate date">{{item.displayDate}}</div></li>
+    </ul>
+</div>

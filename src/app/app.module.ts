@@ -9,12 +9,14 @@ import {ROUTES} from "./app.routes";
 
 import {HomeComponent} from "./home"
 import {NavigationComponent} from "./navigation"
+import {TodayToDosComponent} from "./todayTodos"
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
-        NavigationComponent
+        NavigationComponent,
+        TodayToDosComponent
     ],
     imports: [
         BrowserModule,
