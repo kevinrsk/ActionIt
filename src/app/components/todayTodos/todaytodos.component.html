@@ -16,9 +16,8 @@
 <div>
     <div class="lined">Today</div>
     <ul class="todolist">
-        <li class="task_item">
-            <aiTodo *ngFor="let todo of today()"
-                  [todo]="todo">
+        <li class="task_item"  *ngFor="let todo of today()" >
+            <aiTodo [todo]="todo">
             </aiTodo>
         </li>
     </ul>

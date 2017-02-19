@@ -9,6 +9,8 @@ import {ROUTES} from './app.routes';
 
 import {HomeComponent} from './components/home'
 import {NavigationComponent} from './components/navigation'
+import {NavigationProjectItemComponent} from './components/navigation'
+import {TimeItemComponent} from './components/navigation'
 import {TodayToDosComponent} from './components/todayTodos'
 import {ToDoComponent} from './components/todo'
 import {TodosContainerComponent} from './components/todosContainer'
@@ -21,6 +23,8 @@ import {TodosContainerComponent} from './components/todosContainer'
         TodosContainerComponent,
         TodayToDosComponent,
         ToDoComponent,
+        NavigationProjectItemComponent,
+        TimeItemComponent
     ],
     imports: [
         BrowserModule,

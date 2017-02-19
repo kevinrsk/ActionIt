@@ -14,15 +14,6 @@ export class NavigationComponent implements OnInit {
             new Project({title: 'Errand', color: '#74e8d3'})
         ]
     }
-    areAnyOverDue(): boolean {
-        return true;
-    }
-    areAnySevenDaysOverDue(): boolean{
-        return false;
-    }
-    isCurrent(): boolean {
-        return true;
-    }
     projects: Project[];
 }
 
