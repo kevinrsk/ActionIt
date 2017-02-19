@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core'
-import {ToDo} from '../../shared'
+import {IToDo} from '../../shared'
+import {ToDoService} from '../../services'
 import * as moment from 'moment'
 import * as _ from 'underscore'
 
@@ -8,28 +9,30 @@ import * as _ from 'underscore'
     styles: [require('./todaytodos.component.less').toString()]
 })
 export class TodayToDosComponent implements OnInit {
-    ngOnInit(): void {
-        this.todos = [
-            new ToDo({title: 'ActionIt', dueDateUtc: moment.utc()}),
-            new ToDo({title: 'ActionIt', dueDateUtc: moment.utc([2011, 0, 1, 8])}),
-            new ToDo({title: 'ActionIt', dueDateUtc: moment.utc([2018, 0, 1, 8])}),
-        ];
+    constructor(private _todoService: ToDoService) {
     }
 
-    todos: ToDo[];
+    ngOnInit(): void {
+        this._todoService.getCurrentToDos().subscribe(
+            todos => this.todos = todos,
+            error => console.error(error)
+        );
+    }
 
-    overdue(): ToDo[] {
+    todos: IToDo[];
+
+    overdue(): IToDo[] {
         let filtered = _.filter(this.todos, todo => {
             return todo.dueDate.isBefore(moment(), 'day');
         });
-        return filtered ;
+        return filtered;
     }
 
-    today(): ToDo[] {
+    today(): IToDo[] {
         let filtered = _.filter(this.todos, todo => {
             return todo.dueDate.isSame(moment(), 'day');
         });
-        return filtered ;
+        return filtered;
     }
 }
 

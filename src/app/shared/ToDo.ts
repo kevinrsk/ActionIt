@@ -1,21 +1,31 @@
-import * as moment from "moment"
+import * as moment from 'moment'
 import Moment = moment.Moment;
 
-export class ToDo {
+export interface IToDo {
+    title: string;
+    dueDateUtc: string;
+    priority: Priority;
+    dueDate: Moment;
+
+    displayDate: string;
+}
+
+export class ToDo implements IToDo{
     constructor(init?: Partial<ToDo>) {
         Object.assign(this, init);
     }
 
     title: string;
-    dueDateUtc: Moment;
+    dueDateUtc: string;
     priority: Priority;
 
+
     get dueDate(): Moment{
-        return moment(this.dueDateUtc.toISOString())
+        return moment(this.dueDateUtc)
     }
 
     get displayDate(): string {
-        return this.dueDateUtc.format("MMM DD")
+        return moment(this.dueDateUtc).format('MMM DD')
     }
 }
 

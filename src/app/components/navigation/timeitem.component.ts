@@ -8,6 +8,7 @@ import {Component, Input} from '@angular/core'
 export class TimeItemComponent {
     @Input() timeItem = {title: '', limit: 0};
 
+    // todo: get this information from shared storage?
     areAnyOverDue(): boolean {
         return true;
     }

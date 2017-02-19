@@ -1,4 +1,5 @@
 import {NgModule}      from '@angular/core'
+import {HttpModule}      from '@angular/http'
 import {NgbModule}     from '@ng-bootstrap/ng-bootstrap';
 import {BrowserModule} from '@angular/platform-browser'
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic'
@@ -27,6 +28,7 @@ import {TodosContainerComponent} from './components/todosContainer'
         TimeItemComponent
     ],
     imports: [
+        HttpModule,
         BrowserModule,
         NgbModule.forRoot(),
         RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: PreloadAllModules})
