@@ -6,9 +6,9 @@
     </div>
     <ul class="todolist">
         <li class="task_item">
-            <todo *ngFor="let todo of overdue()"
+            <aiTodo *ngFor="let todo of overdue()"
                   [todo]="todo">
-            </todo>
+            </aiTodo>
         </li>
     </ul>
 </div>
@@ -17,9 +17,9 @@
     <div class="lined">Today</div>
     <ul class="todolist">
         <li class="task_item">
-            <todo *ngFor="let todo of today()"
+            <aiTodo *ngFor="let todo of today()"
                   [todo]="todo">
-            </todo>
+            </aiTodo>
         </li>
     </ul>
 </div>

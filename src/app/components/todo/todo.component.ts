@@ -3,7 +3,7 @@ import {ToDo} from '../../shared'
 
 
 @Component({
-    selector: 'todo',
+    selector: 'aiTodo',
     templateUrl: './todo.component.html',
     styles: [require('./todo.component.less').toString()]
 
