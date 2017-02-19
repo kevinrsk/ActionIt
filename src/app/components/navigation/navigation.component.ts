@@ -1,17 +1,17 @@
-import {Component, OnInit} from "@angular/core"
+import {Component, OnInit} from '@angular/core'
 
 @Component({
-    templateUrl: "./navigation.component.html",
-    selector: "aiNavigation",
-    styles:  [require("./navigation.component.less").toString()]
+    templateUrl: 'navigation.component.html',
+    selector: 'aiNavigation',
+    styles:  [require('./navigation.component.less').toString()]
 })
 export class NavigationComponent implements OnInit {
     ngOnInit(): void {
         this.projects = [
-            new Project({title: "Personal", color: "#fb886e"}),
-            new Project({title: "Shopping", color: "#cccccc"}),
-            new Project({title: "Work", color: "#e4c4a8"}),
-            new Project({title: "Errand", color: "#74e8d3"})
+            new Project({title: 'Personal', color: '#fb886e'}),
+            new Project({title: 'Shopping', color: '#cccccc'}),
+            new Project({title: 'Work', color: '#e4c4a8'}),
+            new Project({title: 'Errand', color: '#74e8d3'})
         ]
     }
     areAnyOverDue(): boolean {

@@ -1,19 +1,23 @@
 <div id="navTop">
     <ul class="navList">
-        <li class="timeListItems">
+        <li class="timeListItems" routerLink="all">
             <span class="glyphicon glyphicon-inbox"></span>
             <span class="padding"></span>
-            <span>All <span class="counter" [class.isOverDue]="areAnyOverDue" [class.isCurrent]="isCurrent">2</span></span>
+            <span>All <span class="counter" [class.isOverDue]="areAnyOverDue"
+                            [class.isCurrent]="isCurrent">2</span></span>
+
         </li>
-        <li class="timeListItems">
+        <li class="timeListItems" routerLink="today">
             <span class="glyphicon glyphicon-inbox"></span>
             <span class="padding"></span>
-            <span>Today <span class="counter" [class.isOverDue]="areAnyOverDue" [class.isCurrent]="isCurrent">2</span></span>
+            <span>Today <span class="counter" [class.isOverDue]="areAnyOverDue"
+                              [class.isCurrent]="isCurrent">2</span></span>
         </li>
-        <li class="timeListItems">
+        <li class="timeListItems" routerLink="timeList">
             <span class="glyphicon glyphicon-inbox"></span>
             <span class="padding"></span>
-            <span>Next 7 Days <span class="counter" [class.isOverDue]="areAnySevenDaysOverDue" [class.isCurrent]="isCurrent">2</span></span>
+            <span>Next 7 Days <span class="counter" [class.isOverDue]="areAnySevenDaysOverDue"
+                                    [class.isCurrent]="isCurrent">2</span></span>
         </li>
     </ul>
 </div>

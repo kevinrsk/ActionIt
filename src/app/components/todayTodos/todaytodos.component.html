@@ -1,0 +1,25 @@
+<h3>Today</h3>
+
+<div>
+    <div class="lined">
+        Overdue
+    </div>
+    <ul class="todolist">
+        <li class="task_item">
+            <todo *ngFor="let todo of overdue()"
+                  [todo]="todo">
+            </todo>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <div class="lined">Today</div>
+    <ul class="todolist">
+        <li class="task_item">
+            <todo *ngFor="let todo of today()"
+                  [todo]="todo">
+            </todo>
+        </li>
+    </ul>
+</div>

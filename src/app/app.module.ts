@@ -1,22 +1,26 @@
-import {NgModule}      from "@angular/core"
-import {NgbModule}     from "@ng-bootstrap/ng-bootstrap";
-import {BrowserModule} from "@angular/platform-browser"
-import {platformBrowserDynamic} from "@angular/platform-browser-dynamic"
-import {AppComponent}  from "./app.component"
-import {RouterModule, PreloadAllModules} from "@angular/router";
+import {NgModule}      from '@angular/core'
+import {NgbModule}     from '@ng-bootstrap/ng-bootstrap';
+import {BrowserModule} from '@angular/platform-browser'
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic'
+import {AppComponent}  from './app.component'
+import {RouterModule, PreloadAllModules} from '@angular/router';
 
-import {ROUTES} from "./app.routes";
+import {ROUTES} from './app.routes';
 
-import {HomeComponent} from "./home"
-import {NavigationComponent} from "./navigation"
-import {TodayToDosComponent} from "./todayTodos"
+import {HomeComponent} from './components/home'
+import {NavigationComponent} from './components/navigation'
+import {TodayToDosComponent} from './components/todayTodos'
+import {ToDoComponent} from './components/todo'
+import {TodosContainerComponent} from './components/todosContainer'
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         NavigationComponent,
-        TodayToDosComponent
+        TodosContainerComponent,
+        TodayToDosComponent,
+        ToDoComponent,
     ],
     imports: [
         BrowserModule,

@@ -1,22 +1,9 @@
-// import { Component } from "@angular/core";
+import { Component } from '@angular/core';
+import '../../public/css/styles.css';
 
-// @Component({
-//   selector: "app",
-// //  styleUrls: ["./app.component.css"],
-//   template: `
-//     <div class="app">
-//       <router-outlet></router-outlet>
-//     </div>
-//   `
-// })
-// export class AppComponent {}
-
-
-import { Component } from "@angular/core";
-import "../../public/css/styles.css";
 @Component({
-  selector: "app",
-  templateUrl: "./app.component.html",
-  styles: [require("./app.component.less").toString()]
+  selector: 'app',
+  templateUrl: './app.component.html',
+  styles: [require('./app.component.less').toString()]
 })
 export class AppComponent { }
