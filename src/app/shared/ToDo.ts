@@ -2,11 +2,12 @@ import * as moment from 'moment'
 import Moment = moment.Moment;
 
 export interface IToDo {
+    id: number;
+    projectId: number;
     title: string;
     dueDateUtc: string;
     priority: Priority;
     dueDate: Moment;
-
     displayDate: string;
 }
 
@@ -15,6 +16,8 @@ export class ToDo implements IToDo{
         Object.assign(this, init);
     }
 
+    id: number;
+    projectId: number;
     title: string;
     dueDateUtc: string;
     priority: Priority;

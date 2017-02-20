@@ -19,7 +19,7 @@ export class ToDoService {
     getCurrentToDos(): Observable<IToDo[]> {
         return this._http.get(this.url)
                 .map((resp: Response) => _.map(resp.json(), item => new ToDo(item)))
-//                .do(data => console.log('ALL: ' + JSON.stringify(data)))
+                .do(data => console.log('ALL: ' + JSON.stringify(data)))
                 .catch(this.handleError);
     }
 

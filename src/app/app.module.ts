@@ -31,7 +31,7 @@ import {TodosContainerComponent} from './components/todosContainer'
         HttpModule,
         BrowserModule,
         NgbModule.forRoot(),
-        RouterModule.forRoot(ROUTES, {useHash: true, preloadingStrategy: PreloadAllModules})
+        RouterModule.forRoot(ROUTES, {useHash: false, preloadingStrategy: PreloadAllModules})
     ],
     bootstrap: [AppComponent]
 })
