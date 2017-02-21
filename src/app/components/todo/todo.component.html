@@ -1,4 +1,5 @@
 <div (mouseleave)="toggleEditable()"
-     (mouseenter)="toggleEditable()">
-    <span class="task_content_item">{{title}}</span><div class="dueDate date">{{dueDate}}</div><div [hidden]="!editable" class="editIcons"><span class="editIcon">(e)</span><span class="editIcon">(d)</span></div>
+     (mouseenter)="toggleEditable()"
+    class="task_content_item_container">
+    <div class="todo-circle-container"><div class="todo-circle" [style.border-color]="borderColor" [style.background-color]="backgroundColor"></div></div> <span class="task_content_item">{{title}}</span><div class="dueDate date">{{dueDate}}</div><div [hidden]="!editable" class="editIcons"><span class="editIcon">(e)</span><span class="editIcon">(d)</span></div>
 </div>

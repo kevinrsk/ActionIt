@@ -11,7 +11,7 @@ export interface IToDo {
     displayDate: string;
 }
 
-export class ToDo implements IToDo{
+export class ToDo implements IToDo {
     constructor(init?: Partial<ToDo>) {
         Object.assign(this, init);
     }
@@ -23,12 +23,16 @@ export class ToDo implements IToDo{
     priority: Priority;
 
 
-    get dueDate(): Moment{
+    get dueDate(): Moment {
         return moment(this.dueDateUtc)
     }
 
     get displayDate(): string {
         return moment(this.dueDateUtc).format('MMM DD')
+    }
+
+    get isOverDue(): Boolean {
+        return this.dueDate.isBefore(moment(), 'day')
     }
 }
 

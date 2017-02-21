@@ -25,4 +25,14 @@ export class ToDoComponent {
     toggleEditable(): void {
         this.editable = !this.editable;
     }
+
+    get borderColor(): string {
+        if (this.todo.isOverDue) return '#ac0000';
+        return '#c0c0c0';
+    }
+
+    get backgroundColor(): string {
+        if (this.todo.isOverDue) return '#f5e5e5';
+        return 'white';
+    }
 }
