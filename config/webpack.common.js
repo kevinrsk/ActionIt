@@ -25,8 +25,8 @@ module.exports = {
                 loader: 'html-loader'
             },
             {
-                test: /\.less$/,
-                loader: 'style-loader!css-loader!less-loader'
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!sass-loader'
             },
             {
                 test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,

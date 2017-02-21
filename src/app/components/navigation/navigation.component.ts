@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core'
 @Component({
     templateUrl: 'navigation.component.html',
     selector: 'aiNavigation',
-    styles:  [require('./navigation.component.less').toString()]
+    styles:  [require('./navigation.component.scss').toString()]
 })
 export class NavigationComponent implements OnInit {
     ngOnInit(): void {

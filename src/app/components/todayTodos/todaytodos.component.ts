@@ -6,7 +6,7 @@ import * as _ from 'underscore'
 
 @Component({
     templateUrl: 'todaytodos.component.html',
-    styles: [require('./todaytodos.component.less').toString()]
+    styles: [require('./todaytodos.component.scss').toString()]
 })
 export class TodayToDosComponent implements OnInit {
     constructor(private _todoService: ToDoService) {

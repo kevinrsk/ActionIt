@@ -5,7 +5,7 @@ import {ToDo} from '../../shared'
 @Component({
     selector: 'aiTodo',
     templateUrl: './todo.component.html',
-    styles: [require('./todo.component.less').toString()]
+    styles: [require('./todo.component.scss').toString()]
 
 })
 export class ToDoComponent {
