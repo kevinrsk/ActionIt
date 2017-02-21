@@ -13,14 +13,15 @@
 
 <div class="modal-header">
     <h4 class="modal-title">Hi there!</h4>
-    <button type="button" class="close" aria-label="Close" (click)="_activeModal.dismiss('Cross click')">
+    <button type="button" class="close" aria-label="Close" (click)="_activeModal.dismiss('Close')">
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
 <div class="modal-body">
-    <p>Hello, World!</p>
+    <input type="text" name="title" [(ngModel)]="title">
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" (click)="_activeModal.close('Close click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="addTodo()">Add</button>
+    <button type="button" class="btn btn-secondary" (click)="_activeModal.close('Cancel')">Cancel</button>
 </div>
 

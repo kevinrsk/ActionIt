@@ -12,4 +12,8 @@ export class NewToDoComponent {
     }
 
     title: string;
+
+    addTodo() {
+        this._activeModal.close('Add');
+    }
 }
