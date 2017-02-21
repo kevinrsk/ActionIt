@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import '../../public/css/styles.css';
-import {ToDoService} from "./services/ToDoService";
+import '../../public/css/styles.scss';
+import {ToDoService} from './services/ToDoService';
 
 @Component({
   selector: 'app',
