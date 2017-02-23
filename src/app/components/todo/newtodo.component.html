@@ -1,7 +1,7 @@
 <!--<div>
 <form>
     <div>
-    <input type="text" name="title" [(ngModel)]="title">
+
     </div>
     <div>
         <button type="submit"></button>
@@ -12,16 +12,16 @@
 
 
 <div class="modal-header">
-    <h4 class="modal-title">Hi there!</h4>
-    <button type="button" class="close" aria-label="Close" (click)="_activeModal.dismiss('Close')">
+    <h4 class="modal-title">Add ToDo</h4>
+    <button type="button" class="close" aria-label="Close" (click)="_activeModal.dismiss()">
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
 <div class="modal-body">
-    <input type="text" name="title" [(ngModel)]="title">
+    <input type="text" name="title" [(ngModel)]="title" required placeholder="Title">
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-primary" (click)="addTodo()">Add</button>
-    <button type="button" class="btn btn-secondary" (click)="_activeModal.close('Cancel')">Cancel</button>
+    <button type="button" class="btn btn-secondary" (click)="_activeModal.close({'Save': false})">Cancel</button>
 </div>
 

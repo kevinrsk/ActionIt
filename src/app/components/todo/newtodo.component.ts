@@ -14,6 +14,8 @@ export class NewToDoComponent {
     title: string;
 
     addTodo() {
-        this._activeModal.close('Add');
+        if (this.title && this.title !== '') {
+            this._activeModal.close({'Save': true, 'Title': this.title});
+        }
     }
 }

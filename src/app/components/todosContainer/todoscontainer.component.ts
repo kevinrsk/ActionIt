@@ -1,6 +1,7 @@
 import {Component} from '@angular/core'
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {NewToDoComponent} from '../todo/newtodo.component';
+import {ToDoService} from "../../services/ToDoService";
 
 @Component({
     templateUrl: 'todoscontainer.component.html',
@@ -8,12 +9,14 @@ import {NewToDoComponent} from '../todo/newtodo.component';
 })
 export class TodosContainerComponent {
 
-    constructor(private _modalService: NgbModal) {
+    constructor(private _todoService: ToDoService, private _modalService: NgbModal) {
     }
 
 
-    addTask() {
-        this._modalService.open(NewToDoComponent);
-        console.log('Add task');
+    showAddToDoDialog() {
+        let modalRef: NgbModalRef = this._modalService.open(NewToDoComponent);
+        modalRef.result.then(res => {
+            console.log(res);
+        });
     }
 }
