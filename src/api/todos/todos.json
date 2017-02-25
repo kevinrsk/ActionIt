@@ -25,21 +25,21 @@
     "id": 4,
     "title": "ActionIt",
     "dueDateUtc": "20170304",
-    "priority": 3,
+    "priority": 1,
     "projectId": 1
   },
   {
     "id": 5,
     "title": "ActionIt",
     "dueDateUtc": "20170225",
-    "priority": 3,
+    "priority": 2,
     "projectId": 1
   },
   {
     "id": 6,
     "title": "ActionIt",
     "dueDateUtc": "20170307",
-    "priority": 3,
+    "priority": 0,
     "projectId": 1
   }
 ]

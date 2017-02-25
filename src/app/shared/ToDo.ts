@@ -36,7 +36,8 @@ export class ToDo implements IToDo {
     }
 }
 
-enum Priority {
+export enum Priority {
+    None = 0,
     High = 1,
     Medium,
     Low

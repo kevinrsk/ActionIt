@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core'
 import {ToDo} from '../../shared'
+import {Priority} from "../../shared/ToDo";
 
 
 @Component({
@@ -27,12 +28,16 @@ export class ToDoComponent {
     }
 
     get borderColor(): string {
-        if (this.todo.isOverDue) return '#ac0000';
+        if (this.todo.priority === Priority.High) return '#ac0000';
+        if (this.todo.priority === Priority.Medium) return '#f8801c';
+        if (this.todo.priority === Priority.Low) return '#fcc12b';
         return '#c0c0c0';
     }
 
     get backgroundColor(): string {
-        if (this.todo.isOverDue) return '#f5e5e5';
+        if (this.todo.priority === Priority.High) return '#f5e5e5';
+        if (this.todo.priority === Priority.Medium) return '#fef2e8';
+        if (this.todo.priority === Priority.Low) return '#fff6e1';
         return 'white';
     }
 }
