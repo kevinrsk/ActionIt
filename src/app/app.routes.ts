@@ -1,7 +1,7 @@
 import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/home';
 import {TodosContainerComponent} from './components/todosContainer';
-import {TodayToDosComponent} from './components/todayTodos';
+import {ToDosComponent} from './components/todos';
 
 export const ROUTES: Routes = [
     {
@@ -10,19 +10,24 @@ export const ROUTES: Routes = [
         children: [
             {
                 path: '',
-                component: TodayToDosComponent
+                component: ToDosComponent,
+                data: {'days': 1, 'title': 'Today'}
             },
             {
                 path: 'all',
-                component: TodayToDosComponent
+                component: ToDosComponent,
+                data: {'days': 0, 'title': 'All'}
+
             },
             {
                 path: 'today',
-                component: TodayToDosComponent
+                component: ToDosComponent,
+                data: {'days': 1, 'title': 'Today'}
             },
             {
                 path: 'timeList',
-                component: TodayToDosComponent
+                component: ToDosComponent,
+                data: {'days': 7, 'title': 'Next 7 Days'}
             }
         ]
     },
