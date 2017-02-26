@@ -28,10 +28,12 @@ export class ToDosComponent implements OnInit {
     todos: IToDo[];
 
     overdue(): IToDo[] {
-        let filtered = _.filter(this.todos, todo => {
-            return todo.dueDate.isBefore(moment().add(this.routeData.days), 'day');
-        });
-        return filtered;
+        let filtered = _.chain(this.todos)
+            .filter(todo => {
+                return todo.dueDate.isBefore(moment().add(this.routeData.days), 'day');
+            })
+            .sortBy(todo => todo.dueDate);
+        return filtered.value();
     }
 
     today(): IToDo[] {
@@ -42,14 +44,14 @@ export class ToDosComponent implements OnInit {
     }
 
     inDateRange(): IToDo[] {
-        let filtered = _.filter(this.todos, todo => {
+        let filtered = _.chain(this.todos).filter(todo => {
             if (this.routeData.days === 0) {
                 return todo.dueDate.isAfter(moment(), 'day');
             }
             return todo.dueDate.isSameOrBefore(moment().add(this.routeData.days, 'day'), 'day')
                 && todo.dueDate.isAfter(moment(), 'day');
-        });
-        return filtered;
+        }).sortBy(todo => todo.dueDate);
+        return filtered.value();
     }
 
 }
