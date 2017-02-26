@@ -1,28 +1,24 @@
 import {Component, OnInit} from '@angular/core'
+import {ProjectService} from '../../services/ProjectService';
+import {IProject} from '../../shared/Project';
 
 @Component({
     templateUrl: 'navigation.component.html',
     selector: 'aiNavigation',
-    styles:  [require('./navigation.component.scss').toString()]
+    styles: [require('./navigation.component.scss').toString()]
 })
 export class NavigationComponent implements OnInit {
+
+    constructor(private projectService: ProjectService) {
+    }
+
+    projects: IProject[];
+
     ngOnInit(): void {
-        this.projects = [
-            new Project({title: 'Personal', color: '#fb886e'}),
-            new Project({title: 'Shopping', color: '#cccccc'}),
-            new Project({title: 'Work', color: '#e4c4a8'}),
-            new Project({title: 'Errand', color: '#74e8d3'})
-        ]
+        this.projectService.getProjects().subscribe(
+            projects => this.projects = projects,
+            error => console.error(error)
+        );
     }
-    projects: Project[];
 }
 
-export class Project {
-    public constructor(init?: Partial<Project>) {
-        Object.assign(this, init);
-    }
-
-    title: string;
-    description: string;
-    color: string;
-}

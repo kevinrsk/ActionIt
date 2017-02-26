@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Personal",
+    "color": "#fb886e"
+  },
+  {
+    "id": 2,
+    "title": "Shopping",
+    "color": "#cccccc"
+  },
+  {
+    "id": 3,
+    "title": "Work",
+    "color": "#e4c4a8"
+  },
+  {
+    "id": 4,
+    "title": "Errand",
+    "color": "#74e8d3"
+  }
+]
