@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core'
-import {MessageService} from '../../services/MessageService';
+import {MessageService} from '../../shared/MessageService';
 
 @Component({
     selector: 'aiProjectNavItem',

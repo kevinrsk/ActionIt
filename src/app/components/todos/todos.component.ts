@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core'
 import {IToDo} from '../../shared'
-import {ToDoService} from '../../services'
+import {ToDoService} from './todoService'
 import * as moment from 'moment'
 import * as _ from 'underscore'
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
     templateUrl: 'todos.component.html',

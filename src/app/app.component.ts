@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import '../../public/css/styles.scss';
-import {ToDoService} from './services/ToDoService';
-import {ProjectService} from './services/ProjectService';
-import {MessageService} from "./services/MessageService";
+import {ToDoService} from './components/todos';
+import {ProjectService} from './components/navigation';
+import {MessageService} from './shared/MessageService';
 
 @Component({
     selector: 'app',

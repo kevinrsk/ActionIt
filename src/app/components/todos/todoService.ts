@@ -6,7 +6,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import * as _ from 'underscore'
 
-import {ToDo, IToDo} from '../shared/ToDo';
+import {ToDo, IToDo} from '../../shared/ToDo';
 
 @Injectable()
 export class ToDoService {

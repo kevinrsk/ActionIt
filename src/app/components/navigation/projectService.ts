@@ -6,7 +6,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import * as _ from 'underscore'
 
-import {IProject, Project} from '../shared/Project';
+import {IProject, Project} from '../../shared/Project';
 
 @Injectable()
 export class ProjectService {
