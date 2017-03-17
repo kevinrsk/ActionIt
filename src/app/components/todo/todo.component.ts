@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core'
 import {ToDo} from '../../shared'
-import {Priority} from "../../shared/ToDo";
+import {Priority} from '../../shared/ToDo';
 
 
 @Component({
