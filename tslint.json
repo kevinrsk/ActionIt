@@ -34,7 +34,7 @@
     "no-eval": true,
     "no-trailing-whitespace": true,
     "one-line": [true, "check-open-brace", "check-whitespace"],
-    "quotemark": [true, "double"],
+    "quotemark": [true, "single"],
     "semicolon": false,
     "triple-equals": [true, "allow-null-check"],
     "variable-name": [true, "ban-keywords"],

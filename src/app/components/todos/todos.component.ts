@@ -16,6 +16,12 @@ export class ToDosComponent implements OnInit {
     routeData: IExtraRouteData;
 
     ngOnInit(): void {
+
+        // todo: Check that these three lines work
+        //  this._route.data.subscribe(data => {
+        //     this.routeData = <IExtraRouteData>data; 
+        // });     
+
         this.routeData = <IExtraRouteData>this._route.snapshot.data;
         console.log(this.routeData);
 
