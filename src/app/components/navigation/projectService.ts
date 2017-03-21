@@ -5,14 +5,15 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import * as _ from 'underscore';
-
+import { ProjectConfig } from '../../shared/projectConfig';
 import { IProject, Project } from '../../shared/Project';
 
 @Injectable()
 export class ProjectService {
-    private url: string = 'api/todos/projects.json';
+    private url: string;
 
-    constructor(private _http: Http) {
+    constructor(private _http: Http, config: ProjectConfig) {
+        this.url = config.url;
     }
 
     public getProjects(): Observable<IProject[]> {

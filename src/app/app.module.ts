@@ -17,6 +17,7 @@ import { ToDosComponent } from './components/todos';
 import { ToDoComponent } from './components/todo';
 import { NewToDoComponent } from './components/todo';
 import { TodosContainerComponent } from './components/todosContainer';
+import { ProjectConfig } from './shared/projectConfig';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,8 @@ import { TodosContainerComponent } from './components/todosContainer';
         NgbModule.forRoot()
     ],
     entryComponents: [NewToDoComponent],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    providers: [{provide: ProjectConfig, useValue: new ProjectConfig('api/todos/projects.json')}]
 })
 export class AppModule {
 }
