@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core'
-import {ProjectService} from './projectService';
-import {IProject} from '../../shared/Project';
+import { Component, OnInit } from '@angular/core';
+import { ProjectService } from './projectService';
+import { IProject } from '../../shared/Project';
 
 @Component({
     templateUrl: 'navigation.component.html',
@@ -9,16 +9,15 @@ import {IProject} from '../../shared/Project';
 })
 export class NavigationComponent implements OnInit {
 
+    public projects: IProject[];
+
     constructor(private projectService: ProjectService) {
     }
 
-    projects: IProject[];
-
-    ngOnInit(): void {
+    public ngOnInit(): void {
         this.projectService.getProjects().subscribe(
-            projects => this.projects = projects,
-            error => console.error(error)
+            (projects) => this.projects = projects,
+            (error) => console.error(error)
         );
     }
 }
-

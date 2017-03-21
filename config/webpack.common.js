@@ -15,8 +15,7 @@ module.exports = {
     },
 
     module: {
-        loaders: [
-            {
+        loaders: [{
                 test: /\.ts$/,
                 loaders: ['awesome-typescript-loader', 'angular2-template-loader']
             },
@@ -55,7 +54,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: helpers.root('src', 'app'),
-                loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})
+                loader: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader'
+                })
             },
             {
                 test: /\.css$/,
@@ -67,7 +69,7 @@ module.exports = {
 
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor', 'polyfills']
+            name: ['vendor', 'app', 'polyfills']
         }),
 
         new HtmlWebpackPlugin({

@@ -1,5 +1,4 @@
 /// <reference path="./jasmine-matchers.d.ts" />
-
 ////  Jasmine Custom Matchers ////
 // Be sure to extend jasmine-matchers.d.ts when adding matchers
 
@@ -11,7 +10,8 @@ export function addMatchers(): void {
 
 function toHaveText(): jasmine.CustomMatcher {
   return {
-    compare: function (actual: any, expectedText: string, expectationFailOutput?: any): jasmine.CustomMatcherResult {
+    compare: function (actual: any, expectedText: string,
+                       expectationFailOutput?: any): jasmine.CustomMatcherResult {
       const actualText = elementText(actual);
       const pass = actualText.indexOf(expectedText) > -1;
       const message = pass ? '' : composeMessage();

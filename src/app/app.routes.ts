@@ -1,7 +1,7 @@
-import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './components/home';
-import {TodosContainerComponent} from './components/todosContainer';
-import {ToDosComponent} from './components/todos';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home';
+import { TodosContainerComponent } from './components/todosContainer';
+import { ToDosComponent } from './components/todos';
 
 export const ROUTES: Routes = [
     {
@@ -11,23 +11,23 @@ export const ROUTES: Routes = [
             {
                 path: '',
                 component: ToDosComponent,
-                data: {'days': 1, 'title': 'Today'}
+                data: { days: 1, title: 'Today' }
             },
             {
                 path: 'all',
                 component: ToDosComponent,
-                data: {'days': 0, 'title': 'All'}
+                data: { days: 0, title: 'All' }
 
             },
             {
                 path: 'today',
                 component: ToDosComponent,
-                data: {'days': 1, 'title': 'Today'}
+                data: { days: 1, title: 'Today' }
             },
             {
                 path: 'timeList',
                 component: ToDosComponent,
-                data: {'days': 7, 'title': 'Next 7 Days'}
+                data: { days: 7, title: 'Next 7 Days' }
             }
         ]
     },

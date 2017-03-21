@@ -1,4 +1,4 @@
-import * as moment from 'moment'
+import * as moment from 'moment';
 import Moment = moment.Moment;
 
 export interface IToDo {
@@ -12,27 +12,26 @@ export interface IToDo {
 }
 
 export class ToDo implements IToDo {
+    public id: number;
+    public projectId: number;
+    public title: string;
+    public dueDateUtc: string;
+    public priority: Priority;
+
     constructor(init?: Partial<ToDo>) {
         Object.assign(this, init);
     }
 
-    id: number;
-    projectId: number;
-    title: string;
-    dueDateUtc: string;
-    priority: Priority;
-
-
     get dueDate(): Moment {
-        return moment(this.dueDateUtc)
+        return moment(this.dueDateUtc);
     }
 
     get displayDate(): string {
-        return moment(this.dueDateUtc).format('MMM DD')
+        return moment(this.dueDateUtc).format('MMM DD');
     }
 
     get isOverDue(): Boolean {
-        return this.dueDate.isBefore(moment(), 'day')
+        return this.dueDate.isBefore(moment(), 'day');
     }
 }
 

@@ -1,3 +1,2 @@
-export * from './todos.component'
-export * from './todoService'
-
+export * from './todos.component';
+export * from './todoService';

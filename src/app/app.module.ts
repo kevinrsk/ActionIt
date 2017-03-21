@@ -1,22 +1,22 @@
-import { NgModule } from '@angular/core'
-import { FormsModule } from '@angular/forms'
-import { HttpModule } from '@angular/http'
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BrowserModule } from '@angular/platform-browser'
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-import { AppComponent } from './app.component'
+import { BrowserModule } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppComponent } from './app.component';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 
 import { ROUTES } from './app.routes';
 
-import { HomeComponent } from './components/home'
-import { NavigationComponent } from './components/navigation'
-import { NavigationProjectItemComponent } from './components/navigation'
-import { TimeItemComponent } from './components/navigation'
-import { ToDosComponent } from './components/todos'
-import { ToDoComponent } from './components/todo'
-import { NewToDoComponent } from './components/todo'
-import { TodosContainerComponent } from './components/todosContainer'
+import { HomeComponent } from './components/home';
+import { NavigationComponent } from './components/navigation';
+import { NavigationProjectItemComponent } from './components/navigation';
+import { TimeItemComponent } from './components/navigation';
+import { ToDosComponent } from './components/todos';
+import { ToDoComponent } from './components/todo';
+import { NewToDoComponent } from './components/todo';
+import { TodosContainerComponent } from './components/todosContainer';
 
 @NgModule({
     declarations: [
@@ -43,4 +43,4 @@ import { TodosContainerComponent } from './components/todosContainer'
 export class AppModule {
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(AppModule);

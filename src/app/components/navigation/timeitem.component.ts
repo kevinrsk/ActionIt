@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'aiTimeItem',
@@ -6,15 +6,14 @@ import {Component, Input} from '@angular/core'
     styles: [require('./navigation.component.scss').toString()]
 })
 export class TimeItemComponent {
-    @Input() timeItem = {title: '', limit: 0};
+    @Input() public timeItem = { title: '', limit: 0 };
 
     // todo: get this information from shared storage?
-    areAnyOverDue(): boolean {
+    public areAnyOverDue(): boolean {
         return true;
     }
 
-    isCurrent(): boolean {
+    public isCurrent(): boolean {
         return true;
     }
-
 }

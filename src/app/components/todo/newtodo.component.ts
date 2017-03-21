@@ -1,5 +1,5 @@
-import {Component} from '@angular/core'
-import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import { Component } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'ngbd-modal-content',
@@ -7,15 +7,15 @@ import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
     styles: [require('./newtodo.component.scss').toString()]
 })
 export class NewToDoComponent {
-    constructor(private _activeModal: NgbActiveModal) {
-        console.log('New todo component')
+    public title: string;
+
+    constructor(public activeModal: NgbActiveModal) {
+        console.log('New todo component');
     }
 
-    title: string;
-
-    addTodo() {
+    public addTodo() {
         if (this.title && this.title !== '') {
-            this._activeModal.close({'Save': true, 'Title': this.title});
+            this.activeModal.close({ Save: true, Title: this.title });
         }
     }
 }
