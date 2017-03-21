@@ -8,7 +8,6 @@ import { MessageService } from './shared/MessageService';
     selector: 'app',
     templateUrl: './app.component.html',
     styles: [require('./app.component.scss').toString()],
-//    styles: [require('../../public/css/styles.scss').toString(), require('./app.component.scss').toString()],
     providers: [ToDoService, ProjectService, MessageService]
 })
 export class AppComponent {
