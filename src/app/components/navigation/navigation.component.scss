@@ -15,9 +15,11 @@
   .timeListItems {
     padding: 10px 0 4px;
 
-    cursor: pointer;
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
   }
-
 
 }
 

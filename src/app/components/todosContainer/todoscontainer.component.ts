@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { NewToDoComponent } from '../todo/newtodo.component';
-import { MessageService } from '../../shared/MessageService';
+import { SimpleMessageService } from '../../shared/message-service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,7 +12,7 @@ export class TodosContainerComponent implements OnDestroy {
     private message: any;
     private subscription: Subscription;
 
-    constructor(private _modalService: NgbModal, private _messageService: MessageService) {
+    constructor(private _modalService: NgbModal, private _messageService: SimpleMessageService) {
         this.subscription = this._messageService.getMessage().subscribe((message) => {
             this.message = message;
         });

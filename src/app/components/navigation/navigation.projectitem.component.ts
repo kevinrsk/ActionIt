@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { MessageService } from '../../shared/MessageService';
+import { SimpleMessageService } from '../../shared/message-service';
 
 @Component({
     selector: 'aiProjectNavItem',
-    templateUrl: 'projectitem.component.html',
+    templateUrl: 'navigation.projectitem.component.html',
     styles: [require('./navigation.component.scss').toString(),
-             require('./projectitem.component.scss').toString()]
+             require('./navigation.projectitem.component.scss').toString()]
 })
 export class NavigationProjectItemComponent {
 
@@ -15,7 +15,7 @@ export class NavigationProjectItemComponent {
         color: ''
     };
 
-    constructor(private _messageService: MessageService) {
+    constructor(private _messageService: SimpleMessageService) {
     }
 
     public onSelectProject() {

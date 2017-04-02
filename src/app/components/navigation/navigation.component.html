@@ -1,13 +1,13 @@
 <div id="navTop">
     <ul class="navList">
-        <li class="timeListItems" routerLink="all">
-            <aiTimeItem [timeItem]="{title: 'All', limit: 0}"></aiTimeItem>
+        <li class="timeListItems">
+            <a routerLink="/all"><aiTimeItem [timeItem]="{title: 'All', limit: 0}"></aiTimeItem></a>
         </li>
-        <li class="timeListItems" routerLink="today">
-            <aiTimeItem [timeItem]="{title: 'Today', limit: 1}"></aiTimeItem>
+        <li class="timeListItems">
+          <a routerLink="/today"><aiTimeItem [timeItem]="{title: 'Today', limit: 1}"></aiTimeItem></a>
         </li>
-        <li class="timeListItems" routerLink="timeList">
-            <aiTimeItem [timeItem]="{title: 'Next 7 Days', limit: 7}"></aiTimeItem>
+        <li class="timeListItems">
+          <a routerLink="/timeList"><aiTimeItem [timeItem]="{title: 'Next 7 Days', limit: 7}"></aiTimeItem></a>
         </li>
     </ul>
 </div>

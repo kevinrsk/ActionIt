@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectService } from './projectService';
+import { ProjectService } from './project-service';
 import { IProject } from '../../shared/Project';
 
 @Component({
-    templateUrl: 'navigation.component.html',
     selector: 'aiNavigation',
+    templateUrl: 'navigation.component.html',
     styles: [require('./navigation.component.scss').toString()]
 })
 export class NavigationComponent implements OnInit {
